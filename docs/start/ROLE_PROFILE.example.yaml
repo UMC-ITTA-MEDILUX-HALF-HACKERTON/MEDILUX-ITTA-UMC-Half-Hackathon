@@ -1,0 +1,21 @@
+schema_version: 1
+profile_status: unconfigured
+workspace_project_id: null
+display_name: null
+roles: []
+active_role: null
+technical_areas: []
+assigned_feature_ids: []
+current_task_id: null
+requested_work: null
+assignment_reference:
+  source_id: plan.team
+  assignment_revision: null
+  confirmed_by: null
+  confirmed_at: null
+role_confirmed_at: null
+allowed_edit_paths: []
+reviewer: null
+collaborators: []
+role_guide_paths: []
+source_access: []

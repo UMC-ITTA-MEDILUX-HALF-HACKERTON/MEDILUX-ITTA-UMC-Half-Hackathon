@@ -1,0 +1,151 @@
+schema_version: 1
+purpose: Plan 자료별 원본과 백업 연결 목록
+note: 행사 안내 URL은 제품 기획 원본이 아니다. 링크 등록만으로 접근 성공이나 개발 전달 완료로 판정하지 않는다.
+sources:
+- source_id: plan.project
+  title: 기획서
+  service: notion
+  owner_role: PM
+  owner_person: null
+  status: unregistered
+  source_url: null
+  page_or_node_id: null
+  related_feature_ids: []
+  depends_on: []
+  fallback_path: docs/Plan/PROJECT.md
+  inclusion: core
+- source_id: plan.team
+  title: 담당표
+  service: notion
+  owner_role: PM
+  owner_person: null
+  status: unregistered
+  source_url: null
+  page_or_node_id: null
+  related_feature_ids: []
+  depends_on: []
+  fallback_path: docs/Plan/TEAM.md
+  inclusion: core
+- source_id: plan.features
+  title: 기능 목록
+  service: notion
+  owner_role: PM
+  owner_person: null
+  status: unregistered
+  source_url: null
+  page_or_node_id: null
+  related_feature_ids: []
+  depends_on:
+  - plan.project
+  - plan.team
+  fallback_path: docs/Plan/FEATURES.md
+  inclusion: core
+- source_id: plan.policies
+  title: 정책서
+  service: notion
+  owner_role: PM
+  owner_person: null
+  status: unregistered
+  source_url: null
+  page_or_node_id: null
+  related_feature_ids: []
+  depends_on:
+  - plan.project
+  fallback_path: docs/Plan/POLICIES.md
+  inclusion: core
+- source_id: plan.ia
+  title: 정보 구조
+  service: notion
+  owner_role: PM
+  owner_person: null
+  status: unregistered
+  source_url: null
+  page_or_node_id: null
+  related_feature_ids: []
+  depends_on:
+  - plan.features
+  fallback_path: docs/Plan/IA.md
+  inclusion: core
+- source_id: plan.decisions
+  title: 결정 기록
+  service: notion
+  owner_role: PM
+  owner_person: null
+  status: unregistered
+  source_url: null
+  page_or_node_id: null
+  related_feature_ids: []
+  depends_on: []
+  fallback_path: docs/Plan/DECISIONS.md
+  inclusion: core
+- source_id: plan.qa_demo
+  title: QA와 데모
+  service: notion
+  owner_role: PM
+  owner_person: null
+  status: unregistered
+  source_url: null
+  page_or_node_id: null
+  related_feature_ids: []
+  depends_on:
+  - plan.features
+  - plan.policies
+  fallback_path: docs/Plan/QA_DEMO.md
+  inclusion: core
+- source_id: plan.presentation
+  title: 발표 구성
+  service: notion
+  owner_role: PM
+  owner_person: null
+  status: unregistered
+  source_url: null
+  page_or_node_id: null
+  related_feature_ids: []
+  depends_on:
+  - plan.project
+  - plan.qa_demo
+  fallback_path: docs/Plan/PRESENTATION.md
+  inclusion: core
+- source_id: plan.diagrams
+  title: 다이어그램 목록
+  service: figma
+  owner_role: PM
+  owner_person: null
+  status: unregistered
+  source_url: null
+  page_or_node_id: null
+  related_feature_ids: []
+  depends_on:
+  - plan.features
+  - plan.ia
+  fallback_path: docs/Plan/diagrams/INDEX.md
+  inclusion: core
+- source_id: plan.design
+  title: 화면 및 디자인 목록
+  service: figma
+  owner_role: Design
+  owner_person: null
+  status: unregistered
+  source_url: null
+  page_or_node_id: null
+  related_feature_ids: []
+  depends_on:
+  - plan.features
+  - plan.policies
+  - plan.ia
+  fallback_path: docs/Plan/design/INDEX.md
+  inclusion: core
+- source_id: plan.medical
+  title: 의료 근거 목록
+  service: notion
+  owner_role: Medical
+  owner_person: null
+  status: unregistered
+  source_url: null
+  page_or_node_id: null
+  related_feature_ids: []
+  depends_on:
+  - plan.project
+  - plan.features
+  fallback_path: docs/Plan/medical/INDEX.md
+  inclusion: optional_medical

@@ -1,0 +1,47 @@
+schema_version: 1
+template_version: 1.0.0
+prepared_on: '2026-10-27'
+mode: project
+stage: preparation
+project_id: half-hackathon-20261114
+display_name: MEDILUX × 잇타 × UMC 하프해커톤
+product_name: null
+event:
+  start_date: '2026-11-14'
+  end_date: '2026-11-14'
+  timezone: Asia/Seoul
+  format: 하프해커톤
+  start_time: null
+  end_time: null
+  official_url: https://treasure-lady-a66.notion.site/MEDILUX-UMC-3ffcec6abf938094adc5cc66a4b3aa54
+  information_basis: user_confirmed
+active_roles:
+- PM
+- Design
+- Coding
+- Medical
+available_roles:
+- PM
+- Design
+- Coding
+- Medical
+medical_enabled: true
+assignment_status: unassigned
+planning_status: undecided
+technology:
+  frontend: null
+  backend: null
+  database: null
+  deployment: null
+repository:
+  status: remote_configured
+  owner: Whatisjavadude
+  name: MEDILUX-ITTA-UMC-Half-Hackathon
+  visibility: private
+  remote_url: https://github.com/Whatisjavadude/MEDILUX-ITTA-UMC-Half-Hackathon
+  default_branch: main
+online_project_sources_status: unregistered
+limits:
+  agent_delegation: not_enabled
+  background_monitoring: not_configured
+  automatic_sync: not_configured

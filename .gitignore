@@ -1,0 +1,8 @@
+# 개인별 역할·조회 결과·캐시: 공통 AGENTS.md는 공유한다.
+.local/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.swp
+*~
