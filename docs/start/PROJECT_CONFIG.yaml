@@ -2,10 +2,10 @@ schema_version: 1
 template_version: 1.0.0
 prepared_on: '2026-10-27'
 mode: project
-stage: preparation
+stage: planning
 project_id: half-hackathon-20261114
 display_name: MEDILUX × 잇타 × UMC 하프해커톤
-product_name: null
+product_name: 너빼고다옴
 event:
   start_date: '2026-11-14'
   end_date: '2026-11-14'
@@ -15,33 +15,43 @@ event:
   end_time: null
   official_url: https://treasure-lady-a66.notion.site/MEDILUX-UMC-3ffcec6abf938094adc5cc66a4b3aa54
   information_basis: user_confirmed
+  work_window:
+    start_time: '10:30'
+    end_time: '14:30'
+    basis: user_provided_work_period
 active_roles:
 - PM
 - Design
 - Coding
-- Medical
 available_roles:
 - PM
 - Design
 - Coding
 - Medical
-medical_enabled: true
-assignment_status: unassigned
-planning_status: undecided
+medical_enabled: false
+assignment_status: role_level_only_individual_scope_pending
+planning_status: policy_confirmed_implementation_pending
 technology:
+  delivery_platform_status: confirmed
   frontend: null
   backend: null
   database: null
   deployment: null
+  delivery_platform: web_app
+  map_provider: kakao_maps_javascript_api
+  map_integration_status: not_verified
 repository:
   status: remote_configured
-  owner: Whatisjavadude
+  owner: UMC-ITTA-MEDILUX-HALF-HACKERTON
   name: MEDILUX-ITTA-UMC-Half-Hackathon
   visibility: private
-  remote_url: https://github.com/Whatisjavadude/MEDILUX-ITTA-UMC-Half-Hackathon
+  remote_url: https://github.com/UMC-ITTA-MEDILUX-HALF-HACKERTON/MEDILUX-ITTA-UMC-Half-Hackathon
   default_branch: main
-online_project_sources_status: unregistered
+online_project_sources_status: confirmed_bundle_and_scoped_backups_registered
 limits:
   agent_delegation: not_enabled
   background_monitoring: not_configured
   automatic_sync: not_configured
+deliverables:
+  wireframe: excluded_by_user
+  product_runtime: not_implemented_in_this_repository

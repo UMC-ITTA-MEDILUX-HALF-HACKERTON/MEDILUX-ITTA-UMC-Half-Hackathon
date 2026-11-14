@@ -1,119 +1,183 @@
 schema_version: 1
-snapshot_status: not_created
+snapshot_status: partial_coverage
 note: 예약 경로의 빈 양식은 백업 파일 목록에 넣지 않는다. main 커밋은 조회 시 Git에서 확인한다.
 entries:
+- source_id: plan.mvp
+  state: snapshot
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  source_revision: PM-MVP-v2.0
+  source_revision_kind: document_label
+  source_last_edited_at: '2026-11-14T03:19:06.473Z'
+  source_response_as_of: '2026-11-14T03:19:06.473Z'
+  captured_at: '2026-11-14T03:19:08Z'
+  exported_at: '2026-11-14T03:19:08Z'
+  captured_by: PM assistant
+  delivery_status: policy_confirmed_implementation_pending
+  completeness: captured_declared_scope
+  backup_files:
+  - docs/Plan/MVP.md
+  missing_items: []
+  limitations:
+  - 표시한 범위의 Notion 반환 본문만 보존했다.
+  - truncated·unknown_block_count 메타데이터 미제공. 다른 페이지·화면 자산 미포함.
+  verification:
+    status: PASS
+    evidence: Notion 저장 본문 재조회와 범위별 사본 일치 확인. 정책 검증은 docs/PM/VALIDATION-2026-11-14.md 참조. 실제 제품 실행은 미검증.
+  capture_scope: PM 페이지 반환 본문 전체
 - source_id: plan.project
-  state: unregistered_blank
-  source_url: null
-  source_revision: null
-  source_last_edited_at: null
-  captured_at: null
-  exported_at: null
-  captured_by: null
-  delivery_status: null
-  completeness: not_captured
-  backup_files: []
-  reserved_path: docs/Plan/PROJECT.md
+  state: snapshot
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  source_revision: PM-MVP-v2.0
+  source_last_edited_at: '2026-11-14T03:19:06.473Z'
+  captured_at: '2026-11-14T03:19:08Z'
+  exported_at: '2026-11-14T03:19:08Z'
+  captured_by: PM assistant
+  delivery_status: policy_confirmed_implementation_pending
+  completeness: captured_declared_scope
+  backup_files:
+  - docs/Plan/PROJECT.md
   missing_items: []
   verification:
-    status: not_run
-    evidence: null
+    status: PASS
+    evidence: Notion 저장 본문 재조회와 범위별 사본 일치 확인. 정책 검증은 docs/PM/VALIDATION-2026-11-14.md 참조. 실제 제품 실행은 미검증.
+  source_revision_kind: document_label
+  source_response_as_of: '2026-11-14T03:19:06.473Z'
+  capture_scope: 문서 소개와 1절 대상 사용자·가치
+  limitations:
+  - 표시한 범위의 Notion 반환 본문만 보존했다.
+  - truncated·unknown_block_count 메타데이터 미제공. 다른 페이지·화면 자산 미포함.
 - source_id: plan.team
-  state: unregistered_blank
-  source_url: null
-  source_revision: null
-  source_last_edited_at: null
-  captured_at: null
-  exported_at: null
-  captured_by: null
-  delivery_status: null
-  completeness: not_captured
-  backup_files: []
-  reserved_path: docs/Plan/TEAM.md
+  state: snapshot
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  source_revision: PM-MVP-v2.0
+  source_last_edited_at: '2026-11-14T03:19:06.473Z'
+  captured_at: '2026-11-14T03:19:08Z'
+  exported_at: '2026-11-14T03:19:08Z'
+  captured_by: PM assistant
+  delivery_status: policy_confirmed_implementation_pending
+  completeness: captured_declared_scope
+  backup_files:
+  - docs/Plan/TEAM.md
   missing_items: []
   verification:
-    status: not_run
-    evidence: null
+    status: PASS
+    evidence: Notion 저장 본문 재조회와 범위별 사본 일치 확인. 정책 검증은 docs/PM/VALIDATION-2026-11-14.md 참조. 실제 제품 실행은 미검증.
+  source_revision_kind: document_label
+  source_response_as_of: '2026-11-14T03:19:06.473Z'
+  capture_scope: 7절 역할별 인계·발표
+  limitations:
+  - 표시한 범위의 Notion 반환 본문만 보존했다.
+  - truncated·unknown_block_count 메타데이터 미제공. 다른 페이지·화면 자산 미포함.
 - source_id: plan.features
-  state: unregistered_blank
-  source_url: null
-  source_revision: null
-  source_last_edited_at: null
-  captured_at: null
-  exported_at: null
-  captured_by: null
-  delivery_status: null
-  completeness: not_captured
-  backup_files: []
-  reserved_path: docs/Plan/FEATURES.md
+  state: snapshot
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  source_revision: PM-MVP-v2.0
+  source_last_edited_at: '2026-11-14T03:19:06.473Z'
+  captured_at: '2026-11-14T03:19:08Z'
+  exported_at: '2026-11-14T03:19:08Z'
+  captured_by: PM assistant
+  delivery_status: policy_confirmed_implementation_pending
+  completeness: captured_declared_scope
+  backup_files:
+  - docs/Plan/FEATURES.md
   missing_items: []
   verification:
-    status: not_run
-    evidence: null
+    status: PASS
+    evidence: Notion 저장 본문 재조회와 범위별 사본 일치 확인. 정책 검증은 docs/PM/VALIDATION-2026-11-14.md 참조. 실제 제품 실행은 미검증.
+  source_revision_kind: document_label
+  source_response_as_of: '2026-11-14T03:19:06.473Z'
+  capture_scope: 2절 MVP 기능
+  limitations:
+  - 표시한 범위의 Notion 반환 본문만 보존했다.
+  - truncated·unknown_block_count 메타데이터 미제공. 다른 페이지·화면 자산 미포함.
 - source_id: plan.policies
-  state: unregistered_blank
-  source_url: null
-  source_revision: null
-  source_last_edited_at: null
-  captured_at: null
-  exported_at: null
-  captured_by: null
-  delivery_status: null
-  completeness: not_captured
-  backup_files: []
-  reserved_path: docs/Plan/POLICIES.md
+  state: snapshot
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  source_revision: PM-MVP-v2.0
+  source_last_edited_at: '2026-11-14T03:19:06.473Z'
+  captured_at: '2026-11-14T03:19:08Z'
+  exported_at: '2026-11-14T03:19:08Z'
+  captured_by: PM assistant
+  delivery_status: policy_confirmed_implementation_pending
+  completeness: captured_declared_scope
+  backup_files:
+  - docs/Plan/POLICIES.md
   missing_items: []
   verification:
-    status: not_run
-    evidence: null
+    status: PASS
+    evidence: Notion 저장 본문 재조회와 범위별 사본 일치 확인. 정책 검증은 docs/PM/VALIDATION-2026-11-14.md 참조. 실제 제품 실행은 미검증.
+  source_revision_kind: document_label
+  source_response_as_of: '2026-11-14T03:19:06.473Z'
+  capture_scope: 3-1~3-3절과 4절 정책
+  limitations:
+  - 표시한 범위의 Notion 반환 본문만 보존했다.
+  - truncated·unknown_block_count 메타데이터 미제공. 다른 페이지·화면 자산 미포함.
 - source_id: plan.ia
-  state: unregistered_blank
-  source_url: null
-  source_revision: null
-  source_last_edited_at: null
-  captured_at: null
-  exported_at: null
-  captured_by: null
-  delivery_status: null
-  completeness: not_captured
-  backup_files: []
-  reserved_path: docs/Plan/IA.md
+  state: snapshot
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  source_revision: PM-MVP-v2.0
+  source_last_edited_at: '2026-11-14T03:19:06.473Z'
+  captured_at: '2026-11-14T03:19:08Z'
+  exported_at: '2026-11-14T03:19:08Z'
+  captured_by: PM assistant
+  delivery_status: policy_confirmed_implementation_pending
+  completeness: captured_declared_scope
+  backup_files:
+  - docs/Plan/IA.md
   missing_items: []
   verification:
-    status: not_run
-    evidence: null
+    status: PASS
+    evidence: Notion 저장 본문 재조회와 범위별 사본 일치 확인. 정책 검증은 docs/PM/VALIDATION-2026-11-14.md 참조. 실제 제품 실행은 미검증.
+  source_revision_kind: document_label
+  source_response_as_of: '2026-11-14T03:19:06.473Z'
+  capture_scope: 3절 사용자 흐름·기능 연결용 화면 묶음
+  limitations:
+  - 표시한 범위의 Notion 반환 본문만 보존했다.
+  - truncated·unknown_block_count 메타데이터 미제공. 다른 페이지·화면 자산 미포함.
 - source_id: plan.decisions
-  state: unregistered_blank
-  source_url: null
-  source_revision: null
-  source_last_edited_at: null
-  captured_at: null
-  exported_at: null
-  captured_by: null
-  delivery_status: null
-  completeness: not_captured
-  backup_files: []
-  reserved_path: docs/Plan/DECISIONS.md
+  state: snapshot
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  source_revision: PM-MVP-v2.0
+  source_last_edited_at: '2026-11-14T03:19:06.473Z'
+  captured_at: '2026-11-14T03:19:08Z'
+  exported_at: '2026-11-14T03:19:08Z'
+  captured_by: PM assistant
+  delivery_status: policy_confirmed_implementation_pending
+  completeness: captured_declared_scope
+  backup_files:
+  - docs/Plan/DECISIONS.md
   missing_items: []
   verification:
-    status: not_run
-    evidence: null
+    status: PASS
+    evidence: Notion 저장 본문 재조회와 범위별 사본 일치 확인. 정책 검증은 docs/PM/VALIDATION-2026-11-14.md 참조. 실제 제품 실행은 미검증.
+  source_revision_kind: document_label
+  source_response_as_of: '2026-11-14T03:19:06.473Z'
+  capture_scope: 5절 일괄 확정 결정·남은 기술 인계
+  limitations:
+  - 표시한 범위의 Notion 반환 본문만 보존했다.
+  - truncated·unknown_block_count 메타데이터 미제공. 다른 페이지·화면 자산 미포함.
 - source_id: plan.qa_demo
-  state: unregistered_blank
-  source_url: null
-  source_revision: null
-  source_last_edited_at: null
-  captured_at: null
-  exported_at: null
-  captured_by: null
-  delivery_status: null
-  completeness: not_captured
-  backup_files: []
-  reserved_path: docs/Plan/QA_DEMO.md
+  state: snapshot
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  source_revision: PM-MVP-v2.0
+  source_last_edited_at: '2026-11-14T03:19:06.473Z'
+  captured_at: '2026-11-14T03:19:08Z'
+  exported_at: '2026-11-14T03:19:08Z'
+  captured_by: PM assistant
+  delivery_status: policy_confirmed_implementation_pending
+  completeness: captured_declared_scope
+  backup_files:
+  - docs/Plan/QA_DEMO.md
   missing_items: []
   verification:
-    status: not_run
-    evidence: null
+    status: PASS
+    evidence: Notion 저장 본문 재조회와 범위별 사본 일치 확인. 정책 검증은 docs/PM/VALIDATION-2026-11-14.md 참조. 실제 제품 실행은 미검증.
+  source_revision_kind: document_label
+  source_response_as_of: '2026-11-14T03:19:06.473Z'
+  capture_scope: 6절 검증 범위·구현 후 시연 체크리스트
+  limitations:
+  - 표시한 범위의 Notion 반환 본문만 보존했다.
+  - truncated·unknown_block_count 메타데이터 미제공. 다른 페이지·화면 자산 미포함.
 - source_id: plan.presentation
   state: unregistered_blank
   source_url: null

@@ -1,0 +1,941 @@
+{
+  "scope": "document checks and reference policy examples; not product runtime",
+  "total": 89,
+  "passed": 89,
+  "failed": 0,
+  "results": [
+    {
+      "case": "DOC-01 product name",
+      "feature": "documents",
+      "expected": "너빼고다옴",
+      "actual": "너빼고다옴",
+      "status": "PASS"
+    },
+    {
+      "case": "DOC-02 map provider",
+      "feature": "documents",
+      "expected": "kakao_maps_javascript_api",
+      "actual": "kakao_maps_javascript_api",
+      "status": "PASS"
+    },
+    {
+      "case": "DOC-03 Medical inactive",
+      "feature": "documents",
+      "expected": [
+        false,
+        false
+      ],
+      "actual": [
+        false,
+        false
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "DOC-04 source IDs unique",
+      "feature": "documents",
+      "expected": 12,
+      "actual": 12,
+      "status": "PASS"
+    },
+    {
+      "case": "DOC-05 source/backup IDs",
+      "feature": "documents",
+      "expected": [
+        "plan.decisions",
+        "plan.design",
+        "plan.diagrams",
+        "plan.features",
+        "plan.ia",
+        "plan.medical",
+        "plan.mvp",
+        "plan.policies",
+        "plan.presentation",
+        "plan.project",
+        "plan.qa_demo",
+        "plan.team"
+      ],
+      "actual": [
+        "plan.decisions",
+        "plan.design",
+        "plan.diagrams",
+        "plan.features",
+        "plan.ia",
+        "plan.medical",
+        "plan.mvp",
+        "plan.policies",
+        "plan.presentation",
+        "plan.project",
+        "plan.qa_demo",
+        "plan.team"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "DOC-06 features",
+      "feature": "documents",
+      "expected": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-004",
+        "F-005",
+        "F-006",
+        "F-007",
+        "F-008"
+      ],
+      "actual": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-004",
+        "F-005",
+        "F-006",
+        "F-007",
+        "F-008"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "DOC-07 decisions",
+      "feature": "documents",
+      "expected": [
+        "DEC-01",
+        "DEC-02",
+        "DEC-03",
+        "DEC-04",
+        "DEC-05",
+        "DEC-06",
+        "DEC-07",
+        "DEC-08",
+        "DEC-09",
+        "DEC-10",
+        "DEC-11",
+        "DEC-12",
+        "DEC-13",
+        "DEC-14",
+        "DEC-15",
+        "DEC-16",
+        "DEC-17",
+        "DEC-18",
+        "DEC-19",
+        "DEC-20",
+        "DEC-21"
+      ],
+      "actual": [
+        "DEC-01",
+        "DEC-02",
+        "DEC-03",
+        "DEC-04",
+        "DEC-05",
+        "DEC-06",
+        "DEC-07",
+        "DEC-08",
+        "DEC-09",
+        "DEC-10",
+        "DEC-11",
+        "DEC-12",
+        "DEC-13",
+        "DEC-14",
+        "DEC-15",
+        "DEC-16",
+        "DEC-17",
+        "DEC-18",
+        "DEC-19",
+        "DEC-20",
+        "DEC-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "DOC-08 screen group IDs",
+      "feature": "documents",
+      "expected": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004"
+      ],
+      "actual": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "DOC-09 cancelled wireframes",
+      "feature": "documents",
+      "expected": "excluded_by_user",
+      "actual": "excluded_by_user",
+      "status": "PASS"
+    },
+    {
+      "case": "DOC-10 no claimed live map",
+      "feature": "documents",
+      "expected": "not_verified",
+      "actual": "not_verified",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.mvp revision",
+      "feature": "documents",
+      "expected": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "actual": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "plan.mvp capture time",
+      "feature": "documents",
+      "expected": "2026-11-14T03:19:08Z",
+      "actual": "2026-11-14T03:19:08Z",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.mvp declared scope",
+      "feature": "documents",
+      "expected": "PM 페이지 반환 본문 전체",
+      "actual": "PM 페이지 반환 본문 전체",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.mvp body scope preserved",
+      "feature": "documents",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "plan.project revision",
+      "feature": "documents",
+      "expected": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "actual": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "plan.project capture time",
+      "feature": "documents",
+      "expected": "2026-11-14T03:19:08Z",
+      "actual": "2026-11-14T03:19:08Z",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.project declared scope",
+      "feature": "documents",
+      "expected": "문서 소개와 1절 대상 사용자·가치",
+      "actual": "문서 소개와 1절 대상 사용자·가치",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.project body scope preserved",
+      "feature": "documents",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "plan.team revision",
+      "feature": "documents",
+      "expected": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "actual": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "plan.team capture time",
+      "feature": "documents",
+      "expected": "2026-11-14T03:19:08Z",
+      "actual": "2026-11-14T03:19:08Z",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.team declared scope",
+      "feature": "documents",
+      "expected": "7절 역할별 인계·발표",
+      "actual": "7절 역할별 인계·발표",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.team body scope preserved",
+      "feature": "documents",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "plan.features revision",
+      "feature": "documents",
+      "expected": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "actual": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "plan.features capture time",
+      "feature": "documents",
+      "expected": "2026-11-14T03:19:08Z",
+      "actual": "2026-11-14T03:19:08Z",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.features declared scope",
+      "feature": "documents",
+      "expected": "2절 MVP 기능",
+      "actual": "2절 MVP 기능",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.features body scope preserved",
+      "feature": "documents",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "plan.policies revision",
+      "feature": "documents",
+      "expected": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "actual": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "plan.policies capture time",
+      "feature": "documents",
+      "expected": "2026-11-14T03:19:08Z",
+      "actual": "2026-11-14T03:19:08Z",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.policies declared scope",
+      "feature": "documents",
+      "expected": "3-1~3-3절과 4절 정책",
+      "actual": "3-1~3-3절과 4절 정책",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.policies body scope preserved",
+      "feature": "documents",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "plan.ia revision",
+      "feature": "documents",
+      "expected": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "actual": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "plan.ia capture time",
+      "feature": "documents",
+      "expected": "2026-11-14T03:19:08Z",
+      "actual": "2026-11-14T03:19:08Z",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.ia declared scope",
+      "feature": "documents",
+      "expected": "3절 사용자 흐름·기능 연결용 화면 묶음",
+      "actual": "3절 사용자 흐름·기능 연결용 화면 묶음",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.ia body scope preserved",
+      "feature": "documents",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "plan.decisions revision",
+      "feature": "documents",
+      "expected": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "actual": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "plan.decisions capture time",
+      "feature": "documents",
+      "expected": "2026-11-14T03:19:08Z",
+      "actual": "2026-11-14T03:19:08Z",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.decisions declared scope",
+      "feature": "documents",
+      "expected": "5절 일괄 확정 결정·남은 기술 인계",
+      "actual": "5절 일괄 확정 결정·남은 기술 인계",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.decisions body scope preserved",
+      "feature": "documents",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "plan.qa_demo revision",
+      "feature": "documents",
+      "expected": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "actual": [
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0",
+        "PM-MVP-v2.0"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "plan.qa_demo capture time",
+      "feature": "documents",
+      "expected": "2026-11-14T03:19:08Z",
+      "actual": "2026-11-14T03:19:08Z",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.qa_demo declared scope",
+      "feature": "documents",
+      "expected": "6절 검증 범위·구현 후 시연 체크리스트",
+      "actual": "6절 검증 범위·구현 후 시연 체크리스트",
+      "status": "PASS"
+    },
+    {
+      "case": "plan.qa_demo body scope preserved",
+      "feature": "documents",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "plan.presentation blank slot",
+      "feature": "documents",
+      "expected": [
+        "unregistered_blank",
+        []
+      ],
+      "actual": [
+        "unregistered_blank",
+        []
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "plan.diagrams blank slot",
+      "feature": "documents",
+      "expected": [
+        "unregistered_blank",
+        []
+      ],
+      "actual": [
+        "unregistered_blank",
+        []
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "plan.design blank slot",
+      "feature": "documents",
+      "expected": [
+        "unregistered_blank",
+        []
+      ],
+      "actual": [
+        "unregistered_blank",
+        []
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "plan.medical blank slot",
+      "feature": "documents",
+      "expected": [
+        "unregistered_blank",
+        []
+      ],
+      "actual": [
+        "unregistered_blank",
+        []
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "DOC-11 snapshots",
+      "feature": "documents",
+      "expected": 8,
+      "actual": 8,
+      "status": "PASS"
+    },
+    {
+      "case": "DOC-12 local Markdown links",
+      "feature": "documents",
+      "expected": [],
+      "actual": [],
+      "status": "PASS"
+    },
+    {
+      "case": "ARRIVAL early",
+      "feature": "F-007",
+      "expected": [
+        0,
+        "0분"
+      ],
+      "actual": [
+        0,
+        "0분"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "ARRIVAL on time",
+      "feature": "F-007",
+      "expected": [
+        0,
+        "0분"
+      ],
+      "actual": [
+        0,
+        "0분"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "ARRIVAL one second",
+      "feature": "F-007",
+      "expected": [
+        1,
+        "1분 미만"
+      ],
+      "actual": [
+        1,
+        "1분 미만"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "ARRIVAL 59 seconds",
+      "feature": "F-007",
+      "expected": [
+        59,
+        "1분 미만"
+      ],
+      "actual": [
+        59,
+        "1분 미만"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "ARRIVAL 60 seconds",
+      "feature": "F-007",
+      "expected": [
+        60,
+        "1분"
+      ],
+      "actual": [
+        60,
+        "1분"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "ARRIVAL corrected to 5 minutes",
+      "feature": "F-007",
+      "expected": [
+        300,
+        "5분"
+      ],
+      "actual": [
+        300,
+        "5분"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "GPS single",
+      "feature": "F-002",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "GPS boundary",
+      "feature": "F-002",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "GPS outside",
+      "feature": "F-002",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "GPS inaccurate",
+      "feature": "F-002",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "GPS stale",
+      "feature": "F-002",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "GPS same sample",
+      "feature": "F-002",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "GPS consecutive reset",
+      "feature": "F-002",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "GPS after reset",
+      "feature": "F-002",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "GAME win",
+      "feature": "F-006/F-007",
+      "expected": [
+        "승리",
+        0
+      ],
+      "actual": [
+        "승리",
+        0
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "GAME loss",
+      "feature": "F-006/F-007",
+      "expected": [
+        "패배",
+        6000
+      ],
+      "actual": [
+        "패배",
+        6000
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "GAME tie",
+      "feature": "F-006/F-007",
+      "expected": [
+        "무승부",
+        3000
+      ],
+      "actual": [
+        "무승부",
+        3000
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "GAME no rounding tie",
+      "feature": "F-006/F-007",
+      "expected": [
+        "패배",
+        6000
+      ],
+      "actual": [
+        "패배",
+        6000
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "GAME zero base",
+      "feature": "F-006/F-007",
+      "expected": [
+        "패배",
+        0
+      ],
+      "actual": [
+        "패배",
+        0
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "GAME missing score",
+      "feature": "F-006/F-007",
+      "expected": [
+        "승패 미확정",
+        3000
+      ],
+      "actual": [
+        "승패 미확정",
+        3000
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "GAME no opponent",
+      "feature": "F-006/F-007",
+      "expected": [
+        "승패 미확정",
+        3000
+      ],
+      "actual": [
+        "승패 미확정",
+        3000
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "GAME arrival corrected on time",
+      "feature": "F-006/F-007",
+      "expected": [
+        "정시",
+        0
+      ],
+      "actual": [
+        "정시",
+        0
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "GAME still late retains multiplier",
+      "feature": "F-006/F-007",
+      "expected": [
+        "패배",
+        6000
+      ],
+      "actual": [
+        "패배",
+        6000
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "VOTE replacement counts once",
+      "feature": "F-004",
+      "expected": {
+        "C1": 1,
+        "C2": 1
+      },
+      "actual": {
+        "C2": 1,
+        "C1": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "CANDIDATE owner before votes",
+      "feature": "F-003",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CANDIDATE another participant",
+      "feature": "F-003",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "CANDIDATE received vote",
+      "feature": "F-003",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "CANDIDATE after final",
+      "feature": "F-003",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "FINAL host=True candidate=True",
+      "feature": "F-005",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "FINAL host=False candidate=True",
+      "feature": "F-005",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "FINAL host=True candidate=False",
+      "feature": "F-005",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "GAME frozen arrived roster excludes selected only",
+      "feature": "F-006",
+      "expected": [
+        "host",
+        "friend",
+        "lateB"
+      ],
+      "actual": [
+        "host",
+        "friend",
+        "lateB"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "GAME all scores before deadline",
+      "feature": "F-006",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "GAME score after deadline",
+      "feature": "F-006",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "GAME capped duration",
+      "feature": "F-006",
+      "expected": 60,
+      "actual": 60,
+      "status": "PASS"
+    },
+    {
+      "case": "ALERT normal",
+      "feature": "F-008",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "ALERT joined after alert",
+      "feature": "F-008",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "ALERT closed gathering",
+      "feature": "F-008",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "ALERT duplicate event",
+      "feature": "F-008",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "ALERT first candidate only nonvoters",
+      "feature": "F-008",
+      "expected": [
+        "B",
+        "C"
+      ],
+      "actual": [
+        "B",
+        "C"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "ALERT final result all",
+      "feature": "F-008",
+      "expected": [
+        "A",
+        "B",
+        "C"
+      ],
+      "actual": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "PASS"
+    }
+  ]
+}

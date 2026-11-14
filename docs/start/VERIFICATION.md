@@ -1,14 +1,30 @@
 # 로컬 준비 검증 기록
 
+## 현재 기획 기준 — 2026-11-14
+
+너빼고다옴의 PM-MVP-v2.0과 카카오지도 API·모바일 웹앱 방향을 적용했다. Medical은 비활성이며 와이어프레임 제작은 제외했다.
+현재 검증은 [기획 검증 기록](../PM/VALIDATION-2026-11-14.md)을 따른다. 아래 초기 제작 기록의 미정·활성 상태는 당시 상태를 보존한 이력이다.
+
 - 점검일: 2026-10-27 (Asia/Seoul)
 - 템플릿 버전: 1.0.0
 - 대상: MEDILUX × 잇타 × UMC 하프해커톤
 - 설정: Medical 활성
 - 파일 수: 45개 (.gitignore·폴더 보존용 파일·본 기록 포함)
 
+## 현재 저장소 연결 — 조직 이전 반영 2026-11-14
+
+- 사용자 요청에 따라 현재 프로젝트의 origin fetch·push URL을 조직 저장소로 변경했다.
+- 현재 저장소: [UMC-ITTA-MEDILUX-HALF-HACKERTON/MEDILUX-ITTA-UMC-Half-Hackathon](https://github.com/UMC-ITTA-MEDILUX-HALF-HACKERTON/MEDILUX-ITTA-UMC-Half-Hackathon).
+- 소유자 유형: Organization. 공개 범위: 비공개. 기본 브랜치: main.
+- GitHub 연결 도구에서는 새 조직 저장소에 404가 반환됐으나, 로컬 GitHub CLI로 저장소 메타데이터·읽기/쓰기 권한을 확인했다.
+- `git ls-remote --symref origin HEAD refs/heads/main`으로 새 origin 연결과 main 기본 브랜치를 확인했다.
+- 조회 시점 로컬 HEAD와 원격 main: `3da96e3239c224693dec15e4acba4f086215521e`로 일치.
+- README·PROJECT_CONFIG의 현재 저장소 주소와 소유자를 갱신했다. main의 origin/main 추적 관계는 유지했다.
+- 이 작업으로 기존 미커밋 기획 문서를 커밋·푸시·덮어쓰기하지 않았다. 아래 개인 계정 주소와 초기 검증 결과는 과거 이력이다.
+
 ## 최초 제작 시점의 정적 검사
 
-아래는 Git 초기화 이전의 제작 기록이다. 현재 저장소 연결 상태는 뒤의 최종 점검을 따른다.
+아래는 Git 초기화 이전의 제작 기록이다. 현재 저장소 연결 상태는 위의 2026-11-14 조직 이전 기록을 따른다.
 
 | 항목 | 판정 | 근거 |
 |---|---|---|
@@ -79,7 +95,7 @@ khmskills에서 확인한 library.orchestration-spec → harness.00 → harness.
 | 근거 중복·상충 | PASS | 빈 양식·온라인 원본·백업·실행 근거를 구분 |
 | 제공자 전환 | N-A | 외부 모델 전환·위임 없음 |
 
-## 아직 실행·검증하지 않은 것
+## 최초 제작 시점에 실행·검증하지 않았던 것
 
 - 실제 참가자가 답변하는 최초 역할 설정과 AI 도구별 AGENTS.md 자동 로딩.
 - 프로젝트 Notion·Figma 원본의 접근·하위 자료·화면·수정 반영.
@@ -87,4 +103,4 @@ khmskills에서 확인한 library.orchestration-spec → harness.00 → harness.
 - 화면·다이어그램의 SVG·PDF 내보내기 및 시각 검수.
 - 팀원 접근·협업·PR·병합 절차.
 
-실제 팀 배정·기획은 미정이다. 문서 저장소 생성은 제품 구현·배포나 온라인 자료 공개를 의미하지 않는다.
+이 목록은 최초 제작 당시 상태다. 현재 정책과 역할별 인계는 PM-MVP-v2.0을 따르며 개인별 개발 배정·제품 구현·배포는 별도다.

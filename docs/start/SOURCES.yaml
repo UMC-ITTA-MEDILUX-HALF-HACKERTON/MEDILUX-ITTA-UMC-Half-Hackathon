@@ -1,97 +1,158 @@
 schema_version: 1
 purpose: Plan 자료별 원본과 백업 연결 목록
 note: 행사 안내 URL은 제품 기획 원본이 아니다. 링크 등록만으로 접근 성공이나 개발 전달 완료로 판정하지 않는다.
+team_workspace:
+  source_id: team.workspace
+  title: Medilux X ITTA X UMC Half Hackerton 3Team - 너빼고다옴
+  service: notion
+  source_url: https://app.notion.com/p/Medilux-X-ITTA-X-UMC-Half-Hackerton-3Team-418c0efa070a80528399fa6d71ce5b1c?source=copy_link
+  page_or_node_id: 418c0efa-070a-8052-8399-fa6d71ce5b1c
+  status: registered
+  intended_use: 팀 기획 문서 작업 공간
+  document_mapping_status: partial
+  note: 확정 정책의 원본은 PM 페이지다. 관련 문서는 동일 페이지의 capture_scope별 사본이며 별도 Notion 페이지로 분리된 것은 아니다.
+current_working_bundle: plan.mvp
 sources:
+- source_id: plan.mvp
+  title: PM — MVP 기능·사용자 흐름·게임 정책
+  service: notion
+  owner_role: PM
+  owner_person: null
+  status: registered
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  page_or_node_id: 418c0efa-070a-80c2-9109-cd7db7143067
+  source_revision: PM-MVP-v2.0
+  delivery_status: policy_confirmed_implementation_pending
+  related_feature_ids: &id001
+  - F-001
+  - F-002
+  - F-003
+  - F-004
+  - F-005
+  - F-006
+  - F-007
+  - F-008
+  depends_on: []
+  fallback_path: docs/Plan/MVP.md
+  inclusion: core
+  coverage: 확정 정책 21개, 기능·흐름·GPS·도착·알림·게임, 카카오지도, 역할 인계, 검증 범위
+  capture_scope: PM 페이지 반환 본문 전체
 - source_id: plan.project
+  covered_by_source_id: plan.mvp
   title: 기획서
   service: notion
   owner_role: PM
   owner_person: null
-  status: unregistered
-  source_url: null
-  page_or_node_id: null
-  related_feature_ids: []
+  status: registered
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  page_or_node_id: 418c0efa-070a-80c2-9109-cd7db7143067
+  related_feature_ids: *id001
   depends_on: []
   fallback_path: docs/Plan/PROJECT.md
   inclusion: core
+  source_revision: PM-MVP-v2.0
+  delivery_status: policy_confirmed_implementation_pending
+  capture_scope: 문서 소개와 1절 대상 사용자·가치
 - source_id: plan.team
   title: 담당표
   service: notion
   owner_role: PM
   owner_person: null
-  status: unregistered
-  source_url: null
-  page_or_node_id: null
-  related_feature_ids: []
+  status: registered
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  page_or_node_id: 418c0efa-070a-80c2-9109-cd7db7143067
+  related_feature_ids: *id001
   depends_on: []
   fallback_path: docs/Plan/TEAM.md
   inclusion: core
+  source_revision: PM-MVP-v2.0
+  delivery_status: policy_confirmed_implementation_pending
+  capture_scope: 7절 역할별 인계·발표
 - source_id: plan.features
+  covered_by_source_id: plan.mvp
   title: 기능 목록
   service: notion
   owner_role: PM
   owner_person: null
-  status: unregistered
-  source_url: null
-  page_or_node_id: null
-  related_feature_ids: []
+  status: registered
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  page_or_node_id: 418c0efa-070a-80c2-9109-cd7db7143067
+  related_feature_ids: *id001
   depends_on:
   - plan.project
   - plan.team
   fallback_path: docs/Plan/FEATURES.md
   inclusion: core
+  source_revision: PM-MVP-v2.0
+  delivery_status: policy_confirmed_implementation_pending
+  capture_scope: 2절 MVP 기능
 - source_id: plan.policies
+  covered_by_source_id: plan.mvp
   title: 정책서
   service: notion
   owner_role: PM
   owner_person: null
-  status: unregistered
-  source_url: null
-  page_or_node_id: null
-  related_feature_ids: []
+  status: registered
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  page_or_node_id: 418c0efa-070a-80c2-9109-cd7db7143067
+  related_feature_ids: *id001
   depends_on:
   - plan.project
   fallback_path: docs/Plan/POLICIES.md
   inclusion: core
+  source_revision: PM-MVP-v2.0
+  delivery_status: policy_confirmed_implementation_pending
+  capture_scope: 3-1~3-3절과 4절 정책
 - source_id: plan.ia
+  covered_by_source_id: plan.mvp
   title: 정보 구조
   service: notion
   owner_role: PM
   owner_person: null
-  status: unregistered
-  source_url: null
-  page_or_node_id: null
-  related_feature_ids: []
+  status: registered
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  page_or_node_id: 418c0efa-070a-80c2-9109-cd7db7143067
+  related_feature_ids: *id001
   depends_on:
   - plan.features
   fallback_path: docs/Plan/IA.md
   inclusion: core
+  source_revision: PM-MVP-v2.0
+  delivery_status: policy_confirmed_implementation_pending
+  capture_scope: 3절 사용자 흐름·기능 연결용 화면 묶음
 - source_id: plan.decisions
   title: 결정 기록
   service: notion
   owner_role: PM
   owner_person: null
-  status: unregistered
-  source_url: null
-  page_or_node_id: null
-  related_feature_ids: []
+  status: registered
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  page_or_node_id: 418c0efa-070a-80c2-9109-cd7db7143067
+  related_feature_ids: *id001
   depends_on: []
   fallback_path: docs/Plan/DECISIONS.md
   inclusion: core
+  source_revision: PM-MVP-v2.0
+  delivery_status: policy_confirmed_implementation_pending
+  capture_scope: 5절 일괄 확정 결정·남은 기술 인계
 - source_id: plan.qa_demo
+  covered_by_source_id: plan.mvp
   title: QA와 데모
   service: notion
   owner_role: PM
   owner_person: null
-  status: unregistered
-  source_url: null
-  page_or_node_id: null
-  related_feature_ids: []
+  status: registered
+  source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
+  page_or_node_id: 418c0efa-070a-80c2-9109-cd7db7143067
+  related_feature_ids: *id001
   depends_on:
   - plan.features
   - plan.policies
   fallback_path: docs/Plan/QA_DEMO.md
   inclusion: core
+  source_revision: PM-MVP-v2.0
+  delivery_status: policy_confirmed_implementation_pending
+  capture_scope: 6절 검증 범위·구현 후 시연 체크리스트
 - source_id: plan.presentation
   title: 발표 구성
   service: notion
