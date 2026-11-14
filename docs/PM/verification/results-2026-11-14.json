@@ -1,7 +1,7 @@
 {
   "scope": "document checks and reference policy examples; not product runtime",
-  "total": 120,
-  "passed": 120,
+  "total": 171,
+  "passed": 171,
   "failed": 0,
   "results": [
     {
@@ -82,7 +82,8 @@
         "F-005",
         "F-006",
         "F-007",
-        "F-008"
+        "F-008",
+        "F-009"
       ],
       "actual": [
         "F-001",
@@ -92,7 +93,8 @@
         "F-005",
         "F-006",
         "F-007",
-        "F-008"
+        "F-008",
+        "F-009"
       ],
       "status": "PASS"
     },
@@ -122,7 +124,11 @@
         "DEC-20",
         "DEC-21",
         "DEC-22",
-        "DEC-23"
+        "DEC-23",
+        "DEC-24",
+        "DEC-25",
+        "DEC-26",
+        "DEC-27"
       ],
       "actual": [
         "DEC-01",
@@ -147,7 +153,11 @@
         "DEC-20",
         "DEC-21",
         "DEC-22",
-        "DEC-23"
+        "DEC-23",
+        "DEC-24",
+        "DEC-25",
+        "DEC-26",
+        "DEC-27"
       ],
       "status": "PASS"
     },
@@ -158,13 +168,15 @@
         "S-001",
         "S-002",
         "S-003",
-        "S-004"
+        "S-004",
+        "S-005"
       ],
       "actual": [
         "S-001",
         "S-002",
         "S-003",
-        "S-004"
+        "S-004",
+        "S-005"
       ],
       "status": "PASS"
     },
@@ -186,22 +198,22 @@
       "case": "plan.mvp revision",
       "feature": "documents",
       "expected": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "actual": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "status": "PASS"
     },
     {
       "case": "plan.mvp capture time",
       "feature": "documents",
-      "expected": "2026-11-14T03:40:59Z",
-      "actual": "2026-11-14T03:40:59Z",
+      "expected": "2026-11-14T04:09:59Z",
+      "actual": "2026-11-14T04:09:59Z",
       "status": "PASS"
     },
     {
@@ -222,22 +234,22 @@
       "case": "plan.project revision",
       "feature": "documents",
       "expected": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "actual": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "status": "PASS"
     },
     {
       "case": "plan.project capture time",
       "feature": "documents",
-      "expected": "2026-11-14T03:40:59Z",
-      "actual": "2026-11-14T03:40:59Z",
+      "expected": "2026-11-14T04:09:59Z",
+      "actual": "2026-11-14T04:09:59Z",
       "status": "PASS"
     },
     {
@@ -258,22 +270,22 @@
       "case": "plan.team revision",
       "feature": "documents",
       "expected": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "actual": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "status": "PASS"
     },
     {
       "case": "plan.team capture time",
       "feature": "documents",
-      "expected": "2026-11-14T03:40:59Z",
-      "actual": "2026-11-14T03:40:59Z",
+      "expected": "2026-11-14T04:09:59Z",
+      "actual": "2026-11-14T04:09:59Z",
       "status": "PASS"
     },
     {
@@ -294,22 +306,22 @@
       "case": "plan.features revision",
       "feature": "documents",
       "expected": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "actual": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "status": "PASS"
     },
     {
       "case": "plan.features capture time",
       "feature": "documents",
-      "expected": "2026-11-14T03:40:59Z",
-      "actual": "2026-11-14T03:40:59Z",
+      "expected": "2026-11-14T04:09:59Z",
+      "actual": "2026-11-14T04:09:59Z",
       "status": "PASS"
     },
     {
@@ -330,29 +342,29 @@
       "case": "plan.policies revision",
       "feature": "documents",
       "expected": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "actual": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "status": "PASS"
     },
     {
       "case": "plan.policies capture time",
       "feature": "documents",
-      "expected": "2026-11-14T03:40:59Z",
-      "actual": "2026-11-14T03:40:59Z",
+      "expected": "2026-11-14T04:09:59Z",
+      "actual": "2026-11-14T04:09:59Z",
       "status": "PASS"
     },
     {
       "case": "plan.policies declared scope",
       "feature": "documents",
-      "expected": "3-1~3-3절과 4절 정책",
-      "actual": "3-1~3-3절과 4절 정책",
+      "expected": "3-1~3-4절과 4절 정책",
+      "actual": "3-1~3-4절과 4절 정책",
       "status": "PASS"
     },
     {
@@ -366,22 +378,22 @@
       "case": "plan.ia revision",
       "feature": "documents",
       "expected": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "actual": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "status": "PASS"
     },
     {
       "case": "plan.ia capture time",
       "feature": "documents",
-      "expected": "2026-11-14T03:40:59Z",
-      "actual": "2026-11-14T03:40:59Z",
+      "expected": "2026-11-14T04:09:59Z",
+      "actual": "2026-11-14T04:09:59Z",
       "status": "PASS"
     },
     {
@@ -402,22 +414,22 @@
       "case": "plan.decisions revision",
       "feature": "documents",
       "expected": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "actual": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "status": "PASS"
     },
     {
       "case": "plan.decisions capture time",
       "feature": "documents",
-      "expected": "2026-11-14T03:40:59Z",
-      "actual": "2026-11-14T03:40:59Z",
+      "expected": "2026-11-14T04:09:59Z",
+      "actual": "2026-11-14T04:09:59Z",
       "status": "PASS"
     },
     {
@@ -438,22 +450,22 @@
       "case": "plan.qa_demo revision",
       "feature": "documents",
       "expected": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "actual": [
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1",
-        "PM-MVP-v2.1"
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2",
+        "PM-MVP-v2.2"
       ],
       "status": "PASS"
     },
     {
       "case": "plan.qa_demo capture time",
       "feature": "documents",
-      "expected": "2026-11-14T03:40:59Z",
-      "actual": "2026-11-14T03:40:59Z",
+      "expected": "2026-11-14T04:09:59Z",
+      "actual": "2026-11-14T04:09:59Z",
       "status": "PASS"
     },
     {
@@ -1274,6 +1286,1067 @@
         "패배",
         6000
       ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT approved parameters",
+      "feature": "F-009",
+      "expected": [
+        500,
+        50,
+        5,
+        86400,
+        86400,
+        3600
+      ],
+      "actual": [
+        500,
+        50,
+        5,
+        86400,
+        86400,
+        3600
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT optional feature and screen",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT policy scope includes three contracts",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT preserves decision and alert authority",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT metadata includes F009",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT deadlines actual end before fallback",
+      "feature": "F-009",
+      "expected": [
+        7200,
+        93600
+      ],
+      "actual": [
+        7200,
+        93600
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT deadlines no host end",
+      "feature": "F-009",
+      "expected": [
+        86400,
+        172800
+      ],
+      "actual": [
+        86400,
+        172800
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT deadlines host end at automatic close",
+      "feature": "F-009",
+      "expected": [
+        86400,
+        172800
+      ],
+      "actual": [
+        86400,
+        172800
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT deadlines late host end cannot extend",
+      "feature": "F-009",
+      "expected": [
+        86400,
+        172800
+      ],
+      "actual": [
+        86400,
+        172800
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT deadlines host end after expiry cannot revive",
+      "feature": "F-009",
+      "expected": [
+        86400,
+        172800
+      ],
+      "actual": [
+        86400,
+        172800
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT deadlines end before scheduled start",
+      "feature": "F-009",
+      "expected": [
+        -1800,
+        84600
+      ],
+      "actual": [
+        -1800,
+        84600
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=7200 now=7199",
+      "feature": "F-009",
+      "expected": "active",
+      "actual": "active",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=7200 now=7200",
+      "feature": "F-009",
+      "expected": "read_only",
+      "actual": "read_only",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=7200 now=7201",
+      "feature": "F-009",
+      "expected": "read_only",
+      "actual": "read_only",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=7200 now=93599",
+      "feature": "F-009",
+      "expected": "read_only",
+      "actual": "read_only",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=7200 now=93600",
+      "feature": "F-009",
+      "expected": "expired",
+      "actual": "expired",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=7200 now=93601",
+      "feature": "F-009",
+      "expected": "expired",
+      "actual": "expired",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=None now=86399",
+      "feature": "F-009",
+      "expected": "active",
+      "actual": "active",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=None now=86400",
+      "feature": "F-009",
+      "expected": "read_only",
+      "actual": "read_only",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=None now=86401",
+      "feature": "F-009",
+      "expected": "read_only",
+      "actual": "read_only",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=None now=172799",
+      "feature": "F-009",
+      "expected": "read_only",
+      "actual": "read_only",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=None now=172800",
+      "feature": "F-009",
+      "expected": "expired",
+      "actual": "expired",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT boundary end=None now=172801",
+      "feature": "F-009",
+      "expected": "expired",
+      "actual": "expired",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT nonmember cannot access any lifecycle state",
+      "feature": "F-009",
+      "expected": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "actual": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT member read and write permissions",
+      "feature": "F-009",
+      "expected": [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "actual": [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT 24 hours is not next midnight",
+      "feature": "F-009",
+      "expected": "2026-11-15T23:30:00+09:00",
+      "actual": "2026-11-15T23:30:00+09:00",
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT cleanup before expiry keeps all",
+      "feature": "F-009",
+      "expected": [
+        {
+          "id": "a-user",
+          "room": "A",
+          "kind": "chat_user"
+        },
+        {
+          "id": "a-system",
+          "room": "A",
+          "kind": "chat_system"
+        },
+        {
+          "id": "b-user",
+          "room": "B",
+          "kind": "chat_user"
+        },
+        {
+          "id": "gathering",
+          "room": "A",
+          "kind": "gathering"
+        },
+        {
+          "id": "participant",
+          "room": "A",
+          "kind": "participant"
+        },
+        {
+          "id": "candidate",
+          "room": "A",
+          "kind": "candidate"
+        },
+        {
+          "id": "vote",
+          "room": "A",
+          "kind": "vote"
+        },
+        {
+          "id": "decision",
+          "room": "A",
+          "kind": "decision"
+        },
+        {
+          "id": "arrival",
+          "room": "A",
+          "kind": "arrival"
+        },
+        {
+          "id": "game",
+          "room": "A",
+          "kind": "game"
+        }
+      ],
+      "actual": [
+        {
+          "id": "a-user",
+          "room": "A",
+          "kind": "chat_user"
+        },
+        {
+          "id": "a-system",
+          "room": "A",
+          "kind": "chat_system"
+        },
+        {
+          "id": "b-user",
+          "room": "B",
+          "kind": "chat_user"
+        },
+        {
+          "id": "gathering",
+          "room": "A",
+          "kind": "gathering"
+        },
+        {
+          "id": "participant",
+          "room": "A",
+          "kind": "participant"
+        },
+        {
+          "id": "candidate",
+          "room": "A",
+          "kind": "candidate"
+        },
+        {
+          "id": "vote",
+          "room": "A",
+          "kind": "vote"
+        },
+        {
+          "id": "decision",
+          "room": "A",
+          "kind": "decision"
+        },
+        {
+          "id": "arrival",
+          "room": "A",
+          "kind": "arrival"
+        },
+        {
+          "id": "game",
+          "room": "A",
+          "kind": "game"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT cleanup at expiry removes only due chat rows",
+      "feature": "F-009",
+      "expected": [
+        "b-user",
+        "gathering",
+        "participant",
+        "candidate",
+        "vote",
+        "decision",
+        "arrival",
+        "game"
+      ],
+      "actual": [
+        "b-user",
+        "gathering",
+        "participant",
+        "candidate",
+        "vote",
+        "decision",
+        "arrival",
+        "game"
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT repeated cleanup is idempotent",
+      "feature": "F-009",
+      "expected": [
+        {
+          "id": "b-user",
+          "room": "B",
+          "kind": "chat_user"
+        },
+        {
+          "id": "gathering",
+          "room": "A",
+          "kind": "gathering"
+        },
+        {
+          "id": "participant",
+          "room": "A",
+          "kind": "participant"
+        },
+        {
+          "id": "candidate",
+          "room": "A",
+          "kind": "candidate"
+        },
+        {
+          "id": "vote",
+          "room": "A",
+          "kind": "vote"
+        },
+        {
+          "id": "decision",
+          "room": "A",
+          "kind": "decision"
+        },
+        {
+          "id": "arrival",
+          "room": "A",
+          "kind": "arrival"
+        },
+        {
+          "id": "game",
+          "room": "A",
+          "kind": "game"
+        }
+      ],
+      "actual": [
+        {
+          "id": "b-user",
+          "room": "B",
+          "kind": "chat_user"
+        },
+        {
+          "id": "gathering",
+          "room": "A",
+          "kind": "gathering"
+        },
+        {
+          "id": "participant",
+          "room": "A",
+          "kind": "participant"
+        },
+        {
+          "id": "candidate",
+          "room": "A",
+          "kind": "candidate"
+        },
+        {
+          "id": "vote",
+          "room": "A",
+          "kind": "vote"
+        },
+        {
+          "id": "decision",
+          "room": "A",
+          "kind": "decision"
+        },
+        {
+          "id": "arrival",
+          "room": "A",
+          "kind": "arrival"
+        },
+        {
+          "id": "game",
+          "room": "A",
+          "kind": "game"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT restart cleanup catches expired rows",
+      "feature": "F-009",
+      "expected": [
+        {
+          "id": "b-user",
+          "room": "B",
+          "kind": "chat_user"
+        },
+        {
+          "id": "gathering",
+          "room": "A",
+          "kind": "gathering"
+        },
+        {
+          "id": "participant",
+          "room": "A",
+          "kind": "participant"
+        },
+        {
+          "id": "candidate",
+          "room": "A",
+          "kind": "candidate"
+        },
+        {
+          "id": "vote",
+          "room": "A",
+          "kind": "vote"
+        },
+        {
+          "id": "decision",
+          "room": "A",
+          "kind": "decision"
+        },
+        {
+          "id": "arrival",
+          "room": "A",
+          "kind": "arrival"
+        },
+        {
+          "id": "game",
+          "room": "A",
+          "kind": "game"
+        }
+      ],
+      "actual": [
+        {
+          "id": "b-user",
+          "room": "B",
+          "kind": "chat_user"
+        },
+        {
+          "id": "gathering",
+          "room": "A",
+          "kind": "gathering"
+        },
+        {
+          "id": "participant",
+          "room": "A",
+          "kind": "participant"
+        },
+        {
+          "id": "candidate",
+          "room": "A",
+          "kind": "candidate"
+        },
+        {
+          "id": "vote",
+          "room": "A",
+          "kind": "vote"
+        },
+        {
+          "id": "decision",
+          "room": "A",
+          "kind": "decision"
+        },
+        {
+          "id": "arrival",
+          "room": "A",
+          "kind": "arrival"
+        },
+        {
+          "id": "game",
+          "room": "A",
+          "kind": "game"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT expiry denies reads while DB rows await cleanup",
+      "feature": "F-009",
+      "expected": [
+        [
+          false,
+          false
+        ],
+        10
+      ],
+      "actual": [
+        [
+          false,
+          false
+        ],
+        10
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT normal hourly sweep delay bounded",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT retry keeps a single record",
+      "feature": "F-009",
+      "expected": 1,
+      "actual": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT identifier reuse with changed content rejected",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT identifiers scoped by participant",
+      "feature": "F-009",
+      "expected": 2,
+      "actual": 2,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT identifiers scoped by room",
+      "feature": "F-009",
+      "expected": 3,
+      "actual": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT send rejected blank",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT send rejected 501 chars",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT send rejected nonmember",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT send rejected at close",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT send rejected after expiry",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT rejected sends preserve records",
+      "feature": "F-009",
+      "expected": 3,
+      "actual": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT 500 basic characters accepted",
+      "feature": "F-009",
+      "expected": 4,
+      "actual": 4,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT initial history returns newest 50",
+      "feature": "F-009",
+      "expected": [
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        113,
+        112,
+        111,
+        110,
+        109,
+        108,
+        107,
+        106,
+        105,
+        104,
+        103,
+        102,
+        101,
+        100,
+        99,
+        98,
+        97,
+        96,
+        95,
+        94,
+        93,
+        92,
+        91,
+        90,
+        89,
+        88,
+        87,
+        86,
+        85,
+        84,
+        83,
+        82,
+        81,
+        80,
+        79,
+        78,
+        77,
+        76,
+        75,
+        74,
+        73,
+        72,
+        71
+      ],
+      "actual": [
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        113,
+        112,
+        111,
+        110,
+        109,
+        108,
+        107,
+        106,
+        105,
+        104,
+        103,
+        102,
+        101,
+        100,
+        99,
+        98,
+        97,
+        96,
+        95,
+        94,
+        93,
+        92,
+        91,
+        90,
+        89,
+        88,
+        87,
+        86,
+        85,
+        84,
+        83,
+        82,
+        81,
+        80,
+        79,
+        78,
+        77,
+        76,
+        75,
+        74,
+        73,
+        72,
+        71
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT earlier page stable across new arrivals",
+      "feature": "F-009",
+      "expected": [
+        70,
+        69,
+        68,
+        67,
+        66,
+        65,
+        64,
+        63,
+        62,
+        61,
+        60,
+        59,
+        58,
+        57,
+        56,
+        55,
+        54,
+        53,
+        52,
+        51,
+        50,
+        49,
+        48,
+        47,
+        46,
+        45,
+        44,
+        43,
+        42,
+        41,
+        40,
+        39,
+        38,
+        37,
+        36,
+        35,
+        34,
+        33,
+        32,
+        31,
+        30,
+        29,
+        28,
+        27,
+        26,
+        25,
+        24,
+        23,
+        22,
+        21
+      ],
+      "actual": [
+        70,
+        69,
+        68,
+        67,
+        66,
+        65,
+        64,
+        63,
+        62,
+        61,
+        60,
+        59,
+        58,
+        57,
+        56,
+        55,
+        54,
+        53,
+        52,
+        51,
+        50,
+        49,
+        48,
+        47,
+        46,
+        45,
+        44,
+        43,
+        42,
+        41,
+        40,
+        39,
+        38,
+        37,
+        36,
+        35,
+        34,
+        33,
+        32,
+        31,
+        30,
+        29,
+        28,
+        27,
+        26,
+        25,
+        24,
+        23,
+        22,
+        21
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT page boundaries do not duplicate",
+      "feature": "F-009",
+      "expected": [],
+      "actual": [],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT late join sees prejoin records",
+      "feature": "F-009",
+      "expected": [
+        122,
+        121,
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        113,
+        112,
+        111,
+        110,
+        109,
+        108,
+        107,
+        106,
+        105,
+        104,
+        103,
+        102,
+        101,
+        100,
+        99,
+        98,
+        97,
+        96,
+        95,
+        94,
+        93,
+        92,
+        91,
+        90,
+        89,
+        88,
+        87,
+        86,
+        85,
+        84,
+        83,
+        82,
+        81,
+        80,
+        79,
+        78,
+        77,
+        76,
+        75,
+        74,
+        73
+      ],
+      "actual": [
+        122,
+        121,
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        113,
+        112,
+        111,
+        110,
+        109,
+        108,
+        107,
+        106,
+        105,
+        104,
+        103,
+        102,
+        101,
+        100,
+        99,
+        98,
+        97,
+        96,
+        95,
+        94,
+        93,
+        92,
+        91,
+        90,
+        89,
+        88,
+        87,
+        86,
+        85,
+        84,
+        83,
+        82,
+        81,
+        80,
+        79,
+        78,
+        77,
+        76,
+        75,
+        74,
+        73
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT polling visible",
+      "feature": "F-009",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT polling hidden",
+      "feature": "F-009",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT polling left screen",
+      "feature": "F-009",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "case": "CHAT polling expired",
+      "feature": "F-009",
+      "expected": false,
+      "actual": false,
       "status": "PASS"
     }
   ]
