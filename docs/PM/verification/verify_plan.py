@@ -43,15 +43,15 @@ check("DOC-02 map provider", "kakao_maps_javascript_api", config["technology"]["
 check("DOC-03 Medical inactive", [False, False], [config["medical_enabled"], "Medical" in config["active_roles"]])
 check("DOC-04 source IDs unique", len(sources), len(by_source))
 check("DOC-05 source/backup IDs", sorted(by_source), sorted(by_backup))
-check("DOC-06 features", [f"F-{i:03}" for i in range(1, 9)], re.findall(r"^\| (F-\d{3}) \|", body, re.M))
-check("DOC-07 decisions", [f"DEC-{i:02}" for i in range(1, 24)], re.findall(r"^\| (DEC-\d{2}) \|", body, re.M))
-check("DOC-08 screen group IDs", [f"S-{i:03}" for i in range(1, 5)], re.findall(r"^\| (S-\d{3}) \|", body, re.M))
+check("DOC-06 features", [f"F-{i:03}" for i in range(1, 10)], re.findall(r"^\| (F-\d{3}) \|", body, re.M))
+check("DOC-07 decisions", [f"DEC-{i:02}" for i in range(1, 28)], re.findall(r"^\| (DEC-\d{2}) \|", body, re.M))
+check("DOC-08 screen group IDs", [f"S-{i:03}" for i in range(1, 6)], re.findall(r"^\| (S-\d{3}) \|", body, re.M))
 check("DOC-09 cancelled wireframes", "excluded_by_user", config["deliverables"]["wireframe"])
 check("DOC-10 no claimed live map", "not_verified", config["technology"]["map_integration_status"])
 for sid, entry in by_backup.items():
     if entry["state"] == "snapshot":
         header, text = snapshot(entry["backup_files"][0])
-        check(sid + " revision", ["PM-MVP-v2.1"] * 3,
+        check(sid + " revision", ["PM-MVP-v2.2"] * 3,
               [header["source_revision"], entry["source_revision"], by_source[sid]["source_revision"]])
         check(sid + " capture time", entry["captured_at"], header["captured_at"])
         check(sid + " declared scope", entry["capture_scope"], header["capture_scope"])
@@ -261,6 +261,142 @@ for label, changed in [("game", [scores[0], dict(scores[1], game="T-Rex")]),
                        ("missing", scores[:1]), ("duplicate", [scores[0], scores[0]])]:
     check("GAME mixed comparison rejects " + label, True, rejected(lambda changed=changed: compare_round("R1", "물고기 점프", ["host", "lateB"], changed)), "F-006")
 check("GAME handicap does not award score bonus", ("패배", 6000), fee(3000, 100, compare_round("R1", "물고기 점프", ["host", "lateB"], scores)), "F-006")
+
+# PM-MVP-v2.2: reference examples for the agreed chat policy, not an API/DB implementation.
+chat_values = [int(spec_number(label)) for label in [
+    "채팅 메시지 최대 글자 수", "채팅 최초 조회 개수", "채팅 새 메시지 조회 간격(초)",
+    "약속 후 채팅 자동 종료까지(초)", "채팅 종료 후 보관 기간(초)", "만료 기록 삭제 작업 주기(초)",
+]]
+message_limit, page_size, poll_seconds, auto_close_seconds, retention_seconds, cleanup_seconds = chat_values
+check("CHAT approved parameters", [500, 50, 5, 86400, 86400, 3600], chat_values, "F-009")
+check("CHAT optional feature and screen", True, all(x in body for x in [
+    "| F-009 | 모임 단체 채팅 — 여유 시", "| S-005 | 모임 단체 채팅 — 여유 시",
+    "채팅 미구현·오류가 후보·투표·최종 결정 흐름을 막지 않는다.",
+]), "F-009")
+check("CHAT policy scope includes three contracts", True, all(x in snapshot("docs/Plan/POLICIES.md")[1]
+    for x in ["POL-CHAT-001", "POL-CHAT-002", "POL-CHAT-003"]), "F-009")
+check("CHAT preserves decision and alert authority", True, all(x in body for x in [
+    "채팅 발언은 후보 등록·투표·최종 확정을 대신하지 않는다.",
+    "채팅 메시지로 별도 앱 밖 푸시를 추가하지 않는다.",
+    "채팅의 자동 종료는 모임 자체 종료가 아니다.",
+]), "F-009")
+check("CHAT metadata includes F009", True, all("F-009" in by_source[sid]["related_feature_ids"]
+    for sid, entry in by_backup.items() if entry["state"] == "snapshot"), "F-009")
+
+
+def chat_deadlines(scheduled, ended=None):
+    closed = scheduled + auto_close_seconds
+    if ended is not None:
+        closed = min(closed, ended)
+    return closed, closed + retention_seconds
+
+
+def chat_state(now, scheduled, ended=None):
+    closed, expires = chat_deadlines(scheduled, ended)
+    return "active" if now < closed else "read_only" if now < expires else "expired"
+
+
+def chat_access(member, now, scheduled, ended=None):
+    state = chat_state(now, scheduled, ended)
+    return member and state != "expired", member and state == "active"
+
+
+for label, args, expected in [
+    ("actual end before fallback", (0, 7200), (7200, 93600)),
+    ("no host end", (0, None), (86400, 172800)),
+    ("host end at automatic close", (0, 86400), (86400, 172800)),
+    ("late host end cannot extend", (0, 90000), (86400, 172800)),
+    ("host end after expiry cannot revive", (0, 200000), (86400, 172800)),
+    ("end before scheduled start", (0, -1800), (-1800, 84600)),
+]:
+    check("CHAT deadlines " + label, expected, chat_deadlines(*args), "F-009")
+
+for ended, closed, expires in [(7200, 7200, 93600), (None, 86400, 172800)]:
+    for now, expected in [(closed - 1, "active"), (closed, "read_only"), (closed + 1, "read_only"),
+                          (expires - 1, "read_only"), (expires, "expired"), (expires + 1, "expired")]:
+        check(f"CHAT boundary end={ended} now={now}", expected, chat_state(now, 0, ended), "F-009")
+check("CHAT nonmember cannot access any lifecycle state", [(False, False)] * 3,
+      [chat_access(False, t, 0, 7200) for t in [0, 7200, 93600]], "F-009")
+check("CHAT member read and write permissions", [(True, True), (True, False), (False, False)],
+      [chat_access(True, t, 0, 7200) for t in [0, 7200, 93600]], "F-009")
+
+# 24 elapsed hours span a local midnight without changing the duration.
+from datetime import datetime, timedelta, timezone
+kst = timezone(timedelta(hours=9))
+ended_at = datetime(2026, 11, 14, 23, 30, tzinfo=kst)
+_, expiry = chat_deadlines(ended_at.timestamp() - 7200, ended_at.timestamp())
+check("CHAT 24 hours is not next midnight", "2026-11-15T23:30:00+09:00", datetime.fromtimestamp(expiry, kst).isoformat(), "F-009")
+
+def cleanup(rows, rooms, now):
+    return [row for row in rows if row["kind"] not in ("chat_user", "chat_system")
+            or now < chat_deadlines(*rooms[row["room"]])[1]]
+
+rooms = {"A": (0, 7200), "B": (86400, None)}
+rows = [dict(id="a-user", room="A", kind="chat_user"), dict(id="a-system", room="A", kind="chat_system"),
+        dict(id="b-user", room="B", kind="chat_user"),
+        *[dict(id=kind, room="A", kind=kind) for kind in ["gathering", "participant", "candidate", "vote", "decision", "arrival", "game"]]]
+remaining = cleanup(rows, rooms, 93600)
+check("CHAT cleanup before expiry keeps all", rows, cleanup(rows, rooms, 93599), "F-009")
+check("CHAT cleanup at expiry removes only due chat rows", [x["id"] for x in rows[2:]], [x["id"] for x in remaining], "F-009")
+check("CHAT repeated cleanup is idempotent", remaining, cleanup(remaining, rooms, 93600), "F-009")
+check("CHAT restart cleanup catches expired rows", remaining, cleanup(rows, rooms, 100000), "F-009")
+check("CHAT expiry denies reads while DB rows await cleanup", ((False, False), 10), (chat_access(True, 93600, 0, 7200), len(rows)), "F-009")
+# A sweep every hour can leave expired rows for at most one interval while reads remain denied.
+delays = [(-offset) % cleanup_seconds for offset in range(cleanup_seconds)]
+check("CHAT normal hourly sweep delay bounded", True, all(0 <= delay < cleanup_seconds for delay in delays), "F-009")
+
+
+def save_message(store, room, participant, message_id, content, member, now, scheduled=0, ended=7200):
+    if not chat_access(member, now, scheduled, ended)[1]:
+        raise ValueError("No current send permission")
+    if not content.strip() or len(content) > message_limit:
+        raise ValueError("Blank or oversized message")
+    key = (room, participant, message_id)
+    if key in store and store[key] != content:
+        raise ValueError("Identifier reused for different content")
+    store.setdefault(key, content)
+    return len(store)
+
+
+message_store = {}
+save_message(message_store, "A", "p1", "m1", "카페로 가자", True, 100)
+check("CHAT retry keeps a single record", 1, save_message(message_store, "A", "p1", "m1", "카페로 가자", True, 101), "F-009")
+check("CHAT identifier reuse with changed content rejected", True, rejected(lambda: save_message(message_store, "A", "p1", "m1", "다른 내용", True, 102)), "F-009")
+check("CHAT identifiers scoped by participant", 2, save_message(message_store, "A", "p2", "m1", "동의", True, 103), "F-009")
+check("CHAT identifiers scoped by room", 3, save_message(message_store, "B", "p1", "m1", "동의", True, 104), "F-009")
+for label, content, member, now in [("blank", " \n ", True, 200), ("501 chars", "가" * 501, True, 200),
+                                    ("nonmember", "안녕", False, 200), ("at close", "안녕", True, 7200),
+                                    ("after expiry", "안녕", True, 93600)]:
+    check("CHAT send rejected " + label, True, rejected(lambda content=content, member=member, now=now:
+          save_message(message_store, "A", "p1", "new", content, member, now)), "F-009")
+check("CHAT rejected sends preserve records", 3, len(message_store), "F-009")
+check("CHAT 500 basic characters accepted", 4, save_message(message_store, "A", "p1", "m500", "가" * 500, True, 300), "F-009")
+
+
+def history_page(ids, before=None):
+    return sorted((i for i in ids if before is None or i < before), reverse=True)[:page_size]
+
+
+history = list(range(1, 121))
+first_page = history_page(history)
+history.extend([121, 122])
+second_page = history_page(history, min(first_page))
+check("CHAT initial history returns newest 50", list(range(120, 70, -1)), first_page, "F-009")
+check("CHAT earlier page stable across new arrivals", list(range(70, 20, -1)), second_page, "F-009")
+check("CHAT page boundaries do not duplicate", [], sorted(set(first_page) & set(second_page)), "F-009")
+check("CHAT late join sees prejoin records", list(range(122, 72, -1)), history_page(history), "F-009")
+
+
+def should_poll(screen_open, visible, member, state):
+    return screen_open and visible and member and state != "expired"
+
+
+for label, args, expected in [("visible", (True, True, True, "active"), True),
+                              ("hidden", (True, False, True, "active"), False),
+                              ("left screen", (False, True, True, "active"), False),
+                              ("expired", (True, True, True, "expired"), False)]:
+    check("CHAT polling " + label, expected, should_poll(*args), "F-009")
+
 
 failed = [x for x in RESULTS if x["status"] == "FAIL"]
 print(json.dumps({"scope": "document checks and reference policy examples; not product runtime", "total": len(RESULTS), "passed": len(RESULTS)-len(failed), "failed": len(failed), "results": RESULTS}, ensure_ascii=False, indent=2))

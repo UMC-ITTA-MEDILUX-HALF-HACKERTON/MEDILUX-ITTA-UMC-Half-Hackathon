@@ -3,11 +3,11 @@ document_kind: plan_backup
 source_id: plan.project
 status: snapshot
 source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
-source_revision: PM-MVP-v2.1
+source_revision: PM-MVP-v2.2
 source_revision_kind: document_label
-source_last_edited_at: '2026-11-14T03:40:42.049Z'
-source_response_as_of: '2026-11-14T03:40:42.049Z'
-captured_at: '2026-11-14T03:40:59Z'
+source_last_edited_at: '2026-11-14T04:09:49.541Z'
+source_response_as_of: '2026-11-14T04:09:49.541Z'
+captured_at: '2026-11-14T04:09:59Z'
 delivery_status: policy_confirmed_implementation_pending
 capture_scope: 문서 소개와 1절 대상 사용자·가치
 ---
@@ -16,11 +16,11 @@ capture_scope: 문서 소개와 1절 대상 사용자·가치
 
 ## 너빼고다옴 — MVP 확정 정책
 
-<b>문서 버전: PM-MVP-v2.1</b><br />작성 기준: <date start="2026-11-14" /><br />팀 논의: <mention url="https://app.notion.com/p/418c0efa070a80528399fa6d71ce5b1c">Medilux X ITTA X UMC Half Hackerton 3Team - 너빼고다옴</mention>
+<b>문서 버전: PM-MVP-v2.2</b><br />작성 기준: <date start="2026-11-14" /><br />팀 논의: <mention url="https://app.notion.com/p/418c0efa070a80528399fa6d71ce5b1c">Medilux X ITTA X UMC Half Hackerton 3Team - 너빼고다옴</mention>
 
 <b>핵심 방향:</b> 아직 모두 모이지 않은 시간에도 다음 장소와 활동을 함께 정한다. 이동 중에도 의견을 낼 수 있는 참가자가 같은 모임에 참여하며, 정확히 10분에 한정하지 않는다.
 
-기존 21개 결정과 후속 게임 선택·지각 핸디캡 2개 결정을 반영한 기획 기준이다. 서비스명은 너빼고다옴, 지도는 카카오지도 API로 확정했다. 와이어프레임 제작은 후속 요청으로 이번 작업에서 제외했다. 제품 구현·실연동·시연 완료를 의미하지 않는다.
+기존 23개 결정과 후속 단체 채팅·보관·삭제·구현 순서 4개 결정을 반영한 기획 기준이다. 채팅 F-009는 MVP 후순위인 ‘여유 시’ 기능이며 공동 결정의 필수 흐름을 지연시키지 않는다. 서비스명은 너빼고다옴, 지도는 카카오지도 API로 확정했다. 와이어프레임 제작은 후속 요청으로 이번 작업에서 제외했다. 제품 구현·실연동·시연 완료를 의미하지 않는다.
 
 <b>제공 형태 — 확정:</b> 모바일 우선 반응형 웹앱. 카카오지도 JavaScript API를 사용한다. 프레임워크·배포 환경·개인별 개발 담당·실제 지원 기기는 기술 인계 시 확정한다.
 
