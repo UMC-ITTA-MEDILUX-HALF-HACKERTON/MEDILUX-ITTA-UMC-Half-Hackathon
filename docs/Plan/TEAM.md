@@ -3,11 +3,11 @@ document_kind: plan_backup
 source_id: plan.team
 status: snapshot
 source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
-source_revision: PM-MVP-v2.0
+source_revision: PM-MVP-v2.1
 source_revision_kind: document_label
-source_last_edited_at: '2026-11-14T03:19:06.473Z'
-source_response_as_of: '2026-11-14T03:19:06.473Z'
-captured_at: '2026-11-14T03:19:08Z'
+source_last_edited_at: '2026-11-14T03:40:42.049Z'
+source_response_as_of: '2026-11-14T03:40:42.049Z'
+captured_at: '2026-11-14T03:40:59Z'
 delivery_status: policy_confirmed_implementation_pending
 capture_scope: 7절 역할별 인계·발표
 ---

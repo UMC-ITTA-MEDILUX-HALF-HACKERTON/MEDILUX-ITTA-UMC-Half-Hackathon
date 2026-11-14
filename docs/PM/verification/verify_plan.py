@@ -7,6 +7,7 @@ The small models below expose boundary cases for the approved policy only.
 """
 from pathlib import Path
 from collections import Counter
+from fractions import Fraction
 import json
 import re
 import sys
@@ -43,14 +44,14 @@ check("DOC-03 Medical inactive", [False, False], [config["medical_enabled"], "Me
 check("DOC-04 source IDs unique", len(sources), len(by_source))
 check("DOC-05 source/backup IDs", sorted(by_source), sorted(by_backup))
 check("DOC-06 features", [f"F-{i:03}" for i in range(1, 9)], re.findall(r"^\| (F-\d{3}) \|", body, re.M))
-check("DOC-07 decisions", [f"DEC-{i:02}" for i in range(1, 22)], re.findall(r"^\| (DEC-\d{2}) \|", body, re.M))
+check("DOC-07 decisions", [f"DEC-{i:02}" for i in range(1, 24)], re.findall(r"^\| (DEC-\d{2}) \|", body, re.M))
 check("DOC-08 screen group IDs", [f"S-{i:03}" for i in range(1, 5)], re.findall(r"^\| (S-\d{3}) \|", body, re.M))
 check("DOC-09 cancelled wireframes", "excluded_by_user", config["deliverables"]["wireframe"])
 check("DOC-10 no claimed live map", "not_verified", config["technology"]["map_integration_status"])
 for sid, entry in by_backup.items():
     if entry["state"] == "snapshot":
         header, text = snapshot(entry["backup_files"][0])
-        check(sid + " revision", ["PM-MVP-v2.0"] * 3,
+        check(sid + " revision", ["PM-MVP-v2.1"] * 3,
               [header["source_revision"], entry["source_revision"], by_source[sid]["source_revision"]])
         check(sid + " capture time", entry["captured_at"], header["captured_at"])
         check(sid + " declared scope", entry["capture_scope"], header["capture_scope"])
@@ -162,6 +163,104 @@ for name, args, expected in [
     check("ALERT " + name, expected, due_alert(*args), "F-008")
 check("ALERT first candidate only nonvoters", ["B", "C"], [u for u in ["A", "B", "C"] if u not in {"A"}], "F-008")
 check("ALERT final result all", ["A", "B", "C"], ["A", "B", "C"], "F-008")
+
+# PM-MVP-v2.1: read the approved parameters from the actual Notion snapshot.
+def spec_number(label):
+    match = re.search(r"^\| " + re.escape(label) + r" \| ([\d.]+)", body, re.M)
+    if match is None:
+        raise ValueError("Missing policy parameter: " + label)
+    return Fraction(match.group(1))
+
+
+cap = spec_number("지각 시간 상한")
+fish_max = spec_number("물고기 크기 최대 배율")
+trex_max = spec_number("T-Rex 장애물 수 최대 배율")
+check("HANDICAP approved parameters", ["1200", "3/2", "2"], list(map(str, (cap, fish_max, trex_max))), "F-006")
+check("HANDICAP formula text", True, all(x in body for x in ["r = min(L / 1200, 1)", "1 + 0.5 × r", "1 + r"]), "F-006")
+check("HANDICAP removes uniform-difficulty conflict", False, "동일 난이도·장애물" in body or "같은 난이도·장애물 조건" in body, "F-006")
+check("HANDICAP flow and screen contract", True, all(x in body for x in ["시작 시 지각 시간·게임·명단·배율 고정", "주최자의 T-Rex/물고기 점프 선택", "같은 경기의 도착자 평균"]), "F-006")
+
+
+def handicap(late_seconds):
+    ratio = min(Fraction(max(0, late_seconds)) / cap, Fraction(1))
+    return ratio, 1 + (fish_max - 1) * ratio, 1 + (trex_max - 1) * ratio
+
+
+for seconds, expected in [
+    (-1, ("0", "1", "1")), (0, ("0", "1", "1")),
+    (1, ("1/1200", "2401/2400", "1201/1200")),
+    (600, ("1/2", "5/4", "3/2")),
+    (1199, ("1199/1200", "3599/2400", "2399/1200")),
+    (1200, ("1", "3/2", "2")), (1201, ("1", "3/2", "2")),
+    (1800, ("1", "3/2", "2")), (7200, ("1", "3/2", "2")),
+]:
+    check(f"HANDICAP boundary {seconds}s", list(expected), list(map(str, handicap(seconds))), "F-006")
+
+scales = [handicap(seconds) for seconds in range(0, 3601)]
+check("HANDICAP monotonic before and after cap", True, all(a[1] <= b[1] and a[2] <= b[2] for a, b in zip(scales, scales[1:])), "F-006")
+check("HANDICAP cap holds across 3601 seconds", True, all(1 <= f <= fish_max and 1 <= t <= trex_max for _, f, t in scales), "F-006")
+check("HANDICAP actual lateness remains uncapped", (1800, "30분"), late(1800, 0), "F-006/F-007")
+
+
+def round_snapshot(is_host, game, target, late_seconds, arrived_people, attempted):
+    if not is_host or game not in ("T-Rex", "물고기 점프"):
+        raise ValueError("Host and valid game required")
+    if target not in arrived_people or late_seconds <= 0 or target in attempted:
+        raise ValueError("Confirmed late arrival and unused single attempt required")
+    opponents = tuple(person for person in arrived_people if person != target)
+    if not opponents:
+        raise ValueError("No comparison group")
+    _, fish, trex = handicap(late_seconds)
+    return dict(game=game, target=target, opponents=opponents, late_seconds=late_seconds,
+                target_multiplier=fish if game == "물고기 점프" else trex,
+                opponent_multipliers=tuple(Fraction(1) for _ in opponents))
+
+
+def rejected(call):
+    try:
+        call()
+        return False
+    except ValueError:
+        return True
+
+
+people = ["host", "lateA", "lateB"]
+arrival = {"late_seconds": 600}
+fish_round = round_snapshot(True, "물고기 점프", "lateA", arrival["late_seconds"], people, set())
+arrival["late_seconds"] = 1200
+people.append("lateC")
+check("HANDICAP start snapshot survives later edits", [600, "5/4", ["host", "lateB"]], [fish_round["late_seconds"], str(fish_round["target_multiplier"]), list(fish_round["opponents"])], "F-006/F-007")
+check("HANDICAP other late opponent uses baseline", ["1", "1"], list(map(str, fish_round["opponent_multipliers"])), "F-006")
+second_round = round_snapshot(True, "T-Rex", "lateB", 1200, people, {"lateA"})
+check("HANDICAP separate late player uses own delay", "2", str(second_round["target_multiplier"]), "F-006")
+for label, args in [
+    ("nonhost", (False, "T-Rex", "lateA", 600, people, set())),
+    ("unknown game", (True, "Other", "lateA", 600, people, set())),
+    ("not arrived", (True, "T-Rex", "missing", 600, people, set())),
+    ("on time", (True, "T-Rex", "lateA", 0, people, set())),
+    ("retry in another game", (True, "T-Rex", "lateA", 600, people, {"lateA"})),
+    ("zero opponents", (True, "물고기 점프", "lateA", 600, ["lateA"], set())),
+]:
+    check("GAME selection rejects " + label, True, rejected(lambda args=args: round_snapshot(*args)), "F-006")
+
+
+def compare_round(round_id, game, expected_people, submissions):
+    ids = [x["person"] for x in submissions]
+    if len(ids) != len(set(ids)) or set(ids) != set(expected_people):
+        raise ValueError("Roster mismatch, duplicate or missing score")
+    if any(x["round"] != round_id or x["game"] != game for x in submissions):
+        raise ValueError("Mixed game or round")
+    return [x["score"] for x in submissions]
+
+
+scores = [dict(person="host", round="R1", game="물고기 점프", score=100),
+          dict(person="lateB", round="R1", game="물고기 점프", score=200)]
+check("GAME same round raw scores accepted", [100, 200], compare_round("R1", "물고기 점프", ["host", "lateB"], scores), "F-006")
+for label, changed in [("game", [scores[0], dict(scores[1], game="T-Rex")]),
+                       ("round", [scores[0], dict(scores[1], round="R2")]),
+                       ("missing", scores[:1]), ("duplicate", [scores[0], scores[0]])]:
+    check("GAME mixed comparison rejects " + label, True, rejected(lambda changed=changed: compare_round("R1", "물고기 점프", ["host", "lateB"], changed)), "F-006")
+check("GAME handicap does not award score bonus", ("패배", 6000), fee(3000, 100, compare_round("R1", "물고기 점프", ["host", "lateB"], scores)), "F-006")
 
 failed = [x for x in RESULTS if x["status"] == "FAIL"]
 print(json.dumps({"scope": "document checks and reference policy examples; not product runtime", "total": len(RESULTS), "passed": len(RESULTS)-len(failed), "failed": len(failed), "results": RESULTS}, ensure_ascii=False, indent=2))

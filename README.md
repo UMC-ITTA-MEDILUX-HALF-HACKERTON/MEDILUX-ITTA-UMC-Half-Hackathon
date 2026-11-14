@@ -6,8 +6,9 @@
 - 일정: 2026-11-14 / 하프해커톤
 - Medical: 비활성 · 관련 내용 공백 유지
 - 템플릿: 1.0.0 / 준비일: 2026-10-27
-- 현재 범위: 공통 지침·역할별 문서, 확정 정책 21개·기능 8개·원본 범위별 사본과 검증 기록
+- 현재 범위: 공통 지침·역할별 문서, 확정 정책 23개·기능 8개·원본 범위별 사본과 검증 기록
 - 지도: 카카오지도 JavaScript API (실제 키·도메인·연동 미검증)
+- 게임: 주최자가 T-Rex/물고기 점프 선택 · 20분 상한 핸디캡(물고기 최대 1.5배, 장애물 수 최대 2배)
 - 와이어프레임: 사용자 요청으로 이번 작업에서 제외
 - 저장소: [MEDILUX-ITTA-UMC-Half-Hackathon](https://github.com/UMC-ITTA-MEDILUX-HALF-HACKERTON/MEDILUX-ITTA-UMC-Half-Hackathon) (비공개, UMC-ITTA-MEDILUX-HALF-HACKERTON 조직)
 - 기본 브랜치: main
@@ -46,6 +47,6 @@ GitHub는 공통 지침·코드·기술 연결 계약의 원본이며 Plan 사�
 
 다음 장소·활동 공동 결정을 핵심으로 [팀 Notion PM](https://app.notion.com/p/418c0efa070a80c29109cd7db7143067)에 MVP 기능·흐름·게임 정책을 정리했다.
 [MVP 로컬 사본](docs/Plan/MVP.md), [확정 결정](docs/Plan/DECISIONS.md), [검증 기록](docs/PM/VALIDATION-2026-11-14.md), [원본 목록](docs/start/SOURCES.yaml)을 함께 확인한다.
-기획 정책은 PM-MVP-v2.0으로 확정했다. 개인별 기능 배정·기술 스택·지도와 푸시 실연동은 후속 개발 인계 사항이다.
+기획 정책은 PM-MVP-v2.1으로 확정했다. 개인별 기능 배정·기술 스택·지도와 푸시 실연동은 후속 개발 인계 사항이다.
 원격 main의 적용본은 실제 커밋과 원본 개정을 함께 확인한다. 문서 검증과 제품 실행 검증을 구분한다.
 개인 역할 파일은 최초 참가자의 답변 후 각자 만든다.
