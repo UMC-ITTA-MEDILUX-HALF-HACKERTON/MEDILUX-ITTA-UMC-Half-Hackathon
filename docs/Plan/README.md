@@ -1,6 +1,6 @@
 # Plan — 원본 조회와 백업
 
-현재 작업 문서는 [팀 Notion PM](https://app.notion.com/p/418c0efa070a80c29109cd7db7143067)의 PM-MVP-v2.0이다. 너빼고다옴의 확정 정책 21개와 카카오지도·모바일 웹앱 기준을 담았다.
+현재 작업 문서는 [팀 Notion PM](https://app.notion.com/p/418c0efa070a80c29109cd7db7143067)의 PM-MVP-v2.1이다. 너빼고다옴의 확정 정책 23개와 카카오지도·모바일 웹앱 기준을 담았다.
 [MVP.md](MVP.md)는 재조회 본문 전체, PROJECT·FEATURES·POLICIES·IA·DECISIONS·TEAM·QA_DEMO는 같은 원본의 범위별 사본이다. 각각의 capture_scope를 확인한다.
 발표 자료·다이어그램·디자인·Medical 슬롯은 빈 양식이다. 와이어프레임 제작은 제외했으며 Medical은 비활성이다. 개인별 개발 담당·나머지 스택·실연동은 아직 미확정 또는 미검증이다.
 검증 결과는 [문서 검증 기록](../PM/VALIDATION-2026-11-14.md)을 따른다. 원격 main의 적용본은 실제 커밋과 문서 개정을 함께 확인한다.

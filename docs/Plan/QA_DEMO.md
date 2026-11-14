@@ -3,11 +3,11 @@ document_kind: plan_backup
 source_id: plan.qa_demo
 status: snapshot
 source_url: https://app.notion.com/p/418c0efa070a80c29109cd7db7143067
-source_revision: PM-MVP-v2.0
+source_revision: PM-MVP-v2.1
 source_revision_kind: document_label
-source_last_edited_at: '2026-11-14T03:19:06.473Z'
-source_response_as_of: '2026-11-14T03:19:06.473Z'
-captured_at: '2026-11-14T03:19:08Z'
+source_last_edited_at: '2026-11-14T03:40:42.049Z'
+source_response_as_of: '2026-11-14T03:40:42.049Z'
+captured_at: '2026-11-14T03:40:59Z'
 delivery_status: policy_confirmed_implementation_pending
 capture_scope: 6절 검증 범위·구현 후 시연 체크리스트
 ---
@@ -27,6 +27,9 @@ capture_scope: 6절 검증 범위·구현 후 시연 체크리스트
 - [ ] 주최자 도착 확인·시각 정정·정시/지각 경계·게임 후 정산값·확인 취소 제한 검증.
 - [ ] 30분 전·10분 전·정각, 최초 후보·최종 결정 알림의 대상·중복·지난 알림·모임 종료 처리.
 - [ ] 웹 푸시 미허용·미지원에서도 화면 내 안내·투표, 지원 기기에서 앱 밖 알림 실제 수신.
-- [ ] 경기 명단 고정·60초 종료·90초 제출 기한·누락 무효·상대 0명·여러 지각자·재도전 금지.
+- [ ] 경기 명단·게임·지각 시간·배율 고정, 60초 종료·90초 제출 기한·누락 무효·상대 0명·여러 지각자·두 게임 통산 1회 제한.
+- [ ] 0초·1초·10분·20분 직전·정확히20분·20분 초과의 두 배율, 대상 지각자만 핸디캡, 시작 전·후 도착 시각 정정.
+- [ ] 다른 게임·경기 점수 혼합 차단, 핸디캡에 따른 점수 보너스 없음, 비교 그룹 기본 배율 유지.
+- [ ] 물고기 외형·충돌 영역 동시 확대와 최대 크기의 통과 여유, T-Rex 정수 개수·생성 간격·최대2배·회피 가능성을 실제 구현에서 확인.
 - [ ] 승리 0·패배 2P·무승부 P, 정확한 평균·중복 제출·P=0·도착 시각 정정 검증.
 - [ ] 게임 미완료와 위치 미공유가 공동 결정 흐름을 막지 않음.
